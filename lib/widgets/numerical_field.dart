@@ -5,10 +5,12 @@ class NumericalField extends StatelessWidget {
     super.key,
     required this.label,
     required this.onChanged,
+    this.maxLength = 3,
   });
 
   final String label;
   final Function(String) onChanged;
+  final int maxLength;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class NumericalField extends StatelessWidget {
               fontSize: 32,
             ),
             keyboardType: TextInputType.number,
-            maxLength: 3,
+            maxLength: maxLength,
             onChanged: onChanged
           ),
         )
