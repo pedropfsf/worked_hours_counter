@@ -31,6 +31,7 @@ class NumericalField extends StatelessWidget {
               fontSize: 32,
             ),
             keyboardType: TextInputType.number,
+            textAlign: TextAlign.end,
             maxLength: maxLength,
             onChanged: onChanged
           ),
