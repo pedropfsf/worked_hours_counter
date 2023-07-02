@@ -4,9 +4,15 @@ class NumericalField extends StatelessWidget {
   const NumericalField({
     super.key,
     required this.label,
+    required this.onChanged,
+    this.maxLength = 3,
+    this.width = 65,
   });
 
   final String label;
+  final Function(String) onChanged;
+  final int maxLength;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -15,17 +21,19 @@ class NumericalField extends StatelessWidget {
       children: [
         Text(label),
         const SizedBox(height: 4),
-        const SizedBox(
-          width: 65,
+        SizedBox(
+          width: width,
           child: TextField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
             ),
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 32,
             ),
             keyboardType: TextInputType.number,
-            maxLength: 2,
+            textAlign: TextAlign.end,
+            maxLength: maxLength,
+            onChanged: onChanged
           ),
         )
       ]
