@@ -62,7 +62,11 @@ class AppState extends State<App> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              NumericalField(label: 'Horas', onChanged: changeHours),
+              NumericalField(
+                label: 'Horas', 
+                onChanged: changeHours,
+                width: 80,
+              ),
               const SizedBox(width: 16),
               NumericalField(
                 label: 'Minutos', 

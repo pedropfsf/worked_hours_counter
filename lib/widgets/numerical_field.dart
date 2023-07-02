@@ -6,11 +6,13 @@ class NumericalField extends StatelessWidget {
     required this.label,
     required this.onChanged,
     this.maxLength = 3,
+    this.width = 65,
   });
 
   final String label;
   final Function(String) onChanged;
   final int maxLength;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class NumericalField extends StatelessWidget {
         Text(label),
         const SizedBox(height: 4),
         SizedBox(
-          width: 65,
+          width: width,
           child: TextField(
             decoration: const InputDecoration(
               border: OutlineInputBorder(),
