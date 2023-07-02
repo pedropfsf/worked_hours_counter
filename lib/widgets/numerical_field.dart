@@ -4,9 +4,11 @@ class NumericalField extends StatelessWidget {
   const NumericalField({
     super.key,
     required this.label,
+    required this.onChanged,
   });
 
   final String label;
+  final Function(String) onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -15,17 +17,18 @@ class NumericalField extends StatelessWidget {
       children: [
         Text(label),
         const SizedBox(height: 4),
-        const SizedBox(
+        SizedBox(
           width: 65,
           child: TextField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
             ),
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 32,
             ),
             keyboardType: TextInputType.number,
-            maxLength: 2,
+            maxLength: 3,
+            onChanged: onChanged
           ),
         )
       ]

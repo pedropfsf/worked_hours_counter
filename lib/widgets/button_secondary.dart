@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ButtonPrimary extends StatelessWidget {
-  const ButtonPrimary({
+class ButtonSecondary extends StatelessWidget {
+  const ButtonSecondary({
     super.key,
     required this.label,
     required this.onPressed,  
@@ -12,16 +12,16 @@ class ButtonPrimary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return TextButton(
       onPressed: onPressed,
       style: const ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll(Colors.deepPurple),
-        padding: MaterialStatePropertyAll(EdgeInsets.all(16))
+        padding: MaterialStatePropertyAll(EdgeInsets.all(16)),
       ),
       child: Text(
         label,
         style: const TextStyle(
           fontSize: 24,
+          color: Colors.white,
         )  
       ),
     );
