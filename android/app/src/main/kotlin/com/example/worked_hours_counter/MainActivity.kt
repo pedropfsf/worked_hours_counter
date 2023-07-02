@@ -1,0 +1,6 @@
+package com.example.worked_hours_counter
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
