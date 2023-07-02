@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="worked_hours_counter"
+        android:label="Calculadora de horas trabalhadas"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
