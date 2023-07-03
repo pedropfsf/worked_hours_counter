@@ -89,12 +89,16 @@ class AppState extends State<App> {
             children: [
               Visibility(
                 visible: isResultVisible,
-                child: ButtonSecondary(
-                  label: 'Esconder',
-                  onPressed: hide,
+                child: Row(
+                  children: [
+                      ButtonSecondary(
+                      label: 'Esconder',
+                      onPressed: hide,
+                    ),
+                    const SizedBox(width: 16),
+                  ]
                 )
               ),
-              const SizedBox(width: 16),
               ButtonPrimary(
                 label: 'Calcular', 
                 onPressed: calculate
